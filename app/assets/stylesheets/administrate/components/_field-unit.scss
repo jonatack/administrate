@@ -1,9 +1,10 @@
 .field-unit {
-  @include fill-parent;
+  @include clearfix;
   align-items: center;
   display: flex;
   margin-bottom: $base-spacing;
   position: relative;
+  width: 100%;
 
   &::after {
     clear: both;
@@ -13,10 +14,14 @@
 }
 
 .field-unit__label {
-  @include span-columns(2 of 12);
+  float: left;
+  margin-left: 1rem;
   text-align: right;
+  width: calc(15% - 1rem);
 }
 
 .field-unit__field {
-  @include span-columns(5 of 12);
+  float: left;
+  margin-left: 2rem;
+  width: 45%;
 }
